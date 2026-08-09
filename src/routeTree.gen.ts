@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppartementRouteImport } from './routes/appartement'
+import { Route as ResidenceRouteImport } from './routes/residence'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppartementRoute = AppartementRouteImport.update({
+  id: '/appartement',
+  path: '/appartement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidenceRoute = ResidenceRouteImport.update({
+  id: '/residence',
+  path: '/residence',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/appartement': typeof AppartementRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/appartement': typeof AppartementRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/appartement': typeof AppartementRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/appartement' | '/residence'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/appartement' | '/residence'
+  id: '__root__' | '/' | '/appartement' | '/residence'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppartementRoute: typeof AppartementRoute
+  ResidenceRoute: typeof ResidenceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +68,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/appartement': {
+      id: '/appartement'
+      path: '/appartement'
+      fullPath: '/appartement'
+      preLoaderRoute: typeof AppartementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residence': {
+      id: '/residence'
+      path: '/residence'
+      fullPath: '/residence'
+      preLoaderRoute: typeof ResidenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppartementRoute: AppartementRoute,
+  ResidenceRoute: ResidenceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
