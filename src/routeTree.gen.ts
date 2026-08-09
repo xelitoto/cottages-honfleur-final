@@ -10,33 +10,74 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AlentoursRouteImport } from './routes/alentours'
+import { Route as AppartementRouteImport } from './routes/appartement'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ResidenceRouteImport } from './routes/residence'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AlentoursRoute = AlentoursRouteImport.update({
+  id: '/alentours',
+  path: '/alentours',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppartementRoute = AppartementRouteImport.update({
+  id: '/appartement',
+  path: '/appartement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidenceRoute = ResidenceRouteImport.update({
+  id: '/residence',
+  path: '/residence',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alentours': typeof AlentoursRoute
+  '/appartement': typeof AppartementRoute
+  '/contact': typeof ContactRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alentours': typeof AlentoursRoute
+  '/appartement': typeof AppartementRoute
+  '/contact': typeof ContactRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alentours': typeof AlentoursRoute
+  '/appartement': typeof AppartementRoute
+  '/contact': typeof ContactRoute
+  '/residence': typeof ResidenceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/alentours' | '/appartement' | '/contact' | '/residence'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/alentours' | '/appartement' | '/contact' | '/residence'
+  id:
+    '__root__' | '/' | '/alentours' | '/appartement' | '/contact' | '/residence'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlentoursRoute: typeof AlentoursRoute
+  AppartementRoute: typeof AppartementRoute
+  ContactRoute: typeof ContactRoute
+  ResidenceRoute: typeof ResidenceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +89,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/alentours': {
+      id: '/alentours'
+      path: '/alentours'
+      fullPath: '/alentours'
+      preLoaderRoute: typeof AlentoursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/appartement': {
+      id: '/appartement'
+      path: '/appartement'
+      fullPath: '/appartement'
+      preLoaderRoute: typeof AppartementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residence': {
+      id: '/residence'
+      path: '/residence'
+      fullPath: '/residence'
+      preLoaderRoute: typeof ResidenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlentoursRoute: AlentoursRoute,
+  AppartementRoute: AppartementRoute,
+  ContactRoute: ContactRoute,
+  ResidenceRoute: ResidenceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
