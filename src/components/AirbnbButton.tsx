@@ -21,17 +21,24 @@ export function AirbnbButton({ className, children, variant = "solid" }: Props) 
   );
 
   if (!site.airbnbUrl) {
+    const pleineLargeur = className?.includes("w-full");
     return (
-      <span className="inline-flex flex-col items-center gap-1">
+      <span
+        className={cn(
+          "inline-flex flex-col items-center gap-1",
+          pleineLargeur && "w-full",
+        )}
+      >
         <span className={cn(classes, "cursor-default")} aria-disabled="true">
           {label}
         </span>
-        <span className="text-[0.68rem] tracking-wide text-muted-foreground">
+        <span className="text-[0.62rem] tracking-wide text-muted-foreground">
           Lien Airbnb à venir
         </span>
       </span>
     );
   }
+
 
   return (
     <a href={site.airbnbUrl} target="_blank" rel="noopener noreferrer" className={classes}>
