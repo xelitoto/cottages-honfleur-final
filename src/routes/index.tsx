@@ -126,7 +126,7 @@ function Accueil() {
             </Link>
             <AirbnbButton className="w-full sm:w-auto" />
           </div>
-          <p className="mt-6 text-[0.68rem] tracking-wide text-cream/60">
+          <p className="mt-8 text-[0.68rem] tracking-wide text-cream/60">
             Photo d'exemple — les photographies du logement seront ajoutées prochainement.
           </p>
         </div>

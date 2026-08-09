@@ -32,7 +32,7 @@ export function AirbnbButton({ className, children, variant = "solid" }: Props) 
         <span className={cn(classes, "cursor-default")} aria-disabled="true">
           {label}
         </span>
-        <span className="text-[0.62rem] tracking-wide text-muted-foreground">
+        <span className="text-[0.62rem] tracking-wide text-current opacity-70">
           Lien Airbnb à venir
         </span>
       </span>
