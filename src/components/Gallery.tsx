@@ -26,10 +26,6 @@ export function Gallery({ titre, intro, items }: Props) {
           />
         ))}
       </div>
-      <p className="mt-6 text-center text-xs text-muted-foreground">
-        Les photographies signalées « Photo d'exemple » illustrent le type de logement et la
-        Normandie. Elles seront remplacées par les photos réelles de l'appartement.
-      </p>
     </section>
   );
 }
