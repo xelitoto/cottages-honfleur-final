@@ -2,27 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AirbnbButton } from "@/components/AirbnbButton";
 import { Gallery } from "@/components/Gallery";
 import { Photo } from "@/components/Photo";
-import { Valeur } from "@/components/ACompleter";
-import { galerieResidence } from "@/content/photos";
-import { residenceEquipements, site } from "@/content/site";
 
 export const Route = createFileRoute("/residence")({
   head: () => ({
     meta: [
-      { title: "La résidence Les Cottages — La Rivière-Saint-Sauveur près de Honfleur" },
+      { title: "La résidence Les Cottages — piscine, tennis et pétanque près de Honfleur" },
       {
         name: "description",
         content:
-          "La résidence Les Cottages à La Rivière-Saint-Sauveur : environnement calme, espaces verts et cadre reposant à quelques minutes de Honfleur, en Normandie.",
+          "La résidence Les Cottages près de Honfleur : piscine extérieure, court de tennis, table de ping-pong et terrain de pétanque dans un cadre calme et verdoyant.",
       },
       { property: "og:title", content: "La résidence Les Cottages" },
       {
         property: "og:description",
         content:
-          "Un cadre paisible et verdoyant aux portes de Honfleur pour se reposer après vos visites en Normandie.",
+          "Piscine, court de tennis, table de ping-pong et terrain de pétanque, au cœur d'un parc paisible aux portes de Honfleur.",
       },
       { property: "og:url", content: "/residence" },
       { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/residence" }],
   }),
@@ -33,66 +31,103 @@ function Residence() {
   return (
     <>
       <header className="mx-auto max-w-4xl px-5 pt-16 pb-10 text-center sm:px-8 sm:pt-24 sm:pb-14">
-        <p className="eyebrow">{site.ville}</p>
+        <p className="eyebrow">Honfleur, Normandie</p>
         <h1 className="title-xl mt-5">La résidence Les Cottages</h1>
         <p className="lead mx-auto mt-6 max-w-2xl">
-          Une résidence de vacances installée à La Rivière-Saint-Sauveur, aux portes de Honfleur,
-          dans un environnement résidentiel et verdoyant, à l'écart de l'agitation touristique.
+          Une résidence de vacances aux portes de Honfleur, dans un environnement verdoyant et
+          tranquille, avec piscine, court de tennis, table de ping-pong et terrain de pétanque.
         </p>
       </header>
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <Photo photo="residence" ratio="16 / 9" className="rounded-sm shadow-soft" priority />
+        <Photo
+          photo="residence-batiment-1"
+          ratio="16 / 9"
+          className="rounded-sm shadow-soft"
+          priority
+        />
       </div>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
+      {/* Le cadre */}
+      <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="eyebrow">L'environnement</p>
-          <h2 className="title-lg rule-wood mt-3">Un cadre propice à la détente</h2>
+          <p className="eyebrow">Le cadre</p>
+          <h2 className="title-lg rule-wood mt-3">Des allées, de la verdure, du calme</h2>
           <div className="lead mt-6 space-y-5">
             <p>
-              Après une journée passée à flâner sur les quais de Honfleur, à longer la côte ou à
-              parcourir les marchés normands, on apprécie de retrouver un lieu tranquille. La
-              résidence offre précisément cela : un rythme plus lent, de la verdure et le calme
-              d'un secteur résidentiel.
+              La résidence s'organise autour d'allées bordées de pelouses et d'arbres. On y circule
+              à pied, d'un équipement à l'autre, sans jamais s'éloigner de l'appartement.
             </p>
             <p>
-              On y prend le temps d'un café le matin, d'une promenade autour des allées le soir, et
-              l'on repart le lendemain vers la mer, les falaises ou les villages de l'arrière-pays.
+              Le matin, on prend son café sur le balcon ; l'après-midi, on rejoint la piscine ou le
+              court de tennis ; le soir, une partie de pétanque prolonge la journée avant le dîner.
             </p>
           </div>
         </div>
-        <Photo photo="residenceJardin" ratio="4 / 3" className="rounded-sm shadow-soft" />
+        <Photo photo="residence-allee-1" ratio="4 / 3" className="rounded-sm shadow-soft" />
       </section>
 
+      {/* La piscine */}
       <section className="border-y border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="max-w-2xl">
-            <p className="eyebrow">Sur place</p>
-            <h2 className="title-lg rule-wood mt-3">Les équipements de la résidence</h2>
+            <p className="eyebrow">L'équipement phare</p>
+            <h2 className="title-lg rule-wood mt-3">La piscine</h2>
             <p className="lead mt-6">
-              Aucun équipement n'est annoncé sans vérification. Les éléments ci-dessous seront
-              confirmés, précisés ou retirés : seuls les équipements réellement disponibles seront
-              conservés.
+              Une piscine extérieure au cœur de la résidence : quelques longueurs, un moment au
+              soleil, et la journée de visites s'efface.
             </p>
           </div>
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2">
-            {residenceEquipements.map((e) => (
-              <li key={e.label} className="rounded-sm border border-border bg-card p-6 shadow-soft">
-                <p className="font-medium">{e.label}</p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  <Valeur valeur={e.confirme ? e.detail : ""} />
-                </p>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-12 grid gap-3 sm:grid-cols-3 sm:gap-4">
+            <Photo photo="residence-piscine-1" ratio="4 / 3" className="rounded-sm shadow-soft" />
+            <Photo photo="residence-piscine-2" ratio="4 / 3" className="rounded-sm shadow-soft" />
+            <Photo photo="residence-piscine-3" ratio="4 / 3" className="rounded-sm shadow-soft" />
+          </div>
+        </div>
+      </section>
+
+      {/* Tennis & ping-pong */}
+      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
+        <article>
+          <Photo photo="residence-tennis-1" ratio="4 / 3" className="rounded-sm shadow-soft" />
+          <h2 className="title-lg mt-6">Le court de tennis</h2>
+          <p className="lead mt-4">
+            Un court accessible aux résidents pour un match matinal ou une partie en fin de journée.
+            Les raquettes sont à disposition dans l'appartement.
+          </p>
+        </article>
+        <article>
+          <Photo photo="residence-ping-pong-1" ratio="4 / 3" className="rounded-sm shadow-soft" />
+          <h2 className="title-lg mt-6">La table de ping-pong</h2>
+          <p className="lead mt-4">
+            À l'ombre des arbres, la table de ping-pong est le rendez-vous des parties improvisées,
+            en famille comme entre amis. Raquettes fournies également.
+          </p>
+        </article>
+      </section>
+
+      {/* Pétanque */}
+      <section className="border-y border-border bg-secondary/40">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
+          <div className="lg:order-2">
+            <p className="eyebrow">Sur place</p>
+            <h2 className="title-lg rule-wood mt-3">Le terrain de pétanque</h2>
+            <p className="lead mt-6">
+              Un terrain ombragé pour des parties tranquilles au soleil couchant. Les boules vous
+              attendent dans l'appartement, il ne reste qu'à former les équipes.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+            <Photo photo="residence-petanque-1" ratio="4 / 3" className="rounded-sm shadow-soft" />
+            <Photo photo="residence-petanque-2" ratio="4 / 3" className="rounded-sm shadow-soft" />
+          </div>
         </div>
       </section>
 
       <Gallery
         titre="La galerie de la résidence"
-        intro="Images d'exemple, en attente des photographies réelles de la résidence et de ses extérieurs."
-        items={galerieResidence}
+        intro="Les allées, les espaces verts et les équipements communs de la résidence."
+        items={["residence-allee-2", "residence-batiment-1", "residence-piscine-2"]}
       />
 
       <section className="mx-auto max-w-3xl px-5 pb-20 text-center sm:px-8 sm:pb-28">

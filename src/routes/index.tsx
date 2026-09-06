@@ -4,17 +4,18 @@ import { AirbnbButton } from "@/components/AirbnbButton";
 import { Gallery } from "@/components/Gallery";
 import { Photo } from "@/components/Photo";
 import { photos, galerieAccueil } from "@/content/photos";
+import { residenceEquipements } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Location saisonnière près de Honfleur — Les Cottages, La Rivière-Saint-Sauveur",
+        title: "Location saisonnière près de Honfleur — Les Cottages, Normandie",
       },
       {
         name: "description",
         content:
-          "Appartement en location saisonnière aux portes de Honfleur, résidence Les Cottages à La Rivière-Saint-Sauveur. Un séjour calme et confortable pour découvrir la Normandie.",
+          "Appartement en location saisonnière aux portes de Honfleur, dans la résidence Les Cottages : piscine, tennis, ping-pong et pétanque, à deux pas de la côte normande.",
       },
       {
         property: "og:title",
@@ -23,9 +24,11 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Une parenthèse normande aux portes de Honfleur : appartement confortable en location saisonnière à La Rivière-Saint-Sauveur.",
+          "Une parenthèse normande aux portes de Honfleur : appartement confortable dans une résidence avec piscine, tennis, ping-pong et pétanque.",
       },
       { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -36,10 +39,10 @@ export const Route = createFileRoute("/")({
           "@type": "LodgingBusiness",
           name: "Les Cottages – Escale près de Honfleur",
           description:
-            "Appartement en location saisonnière dans la résidence Les Cottages à La Rivière-Saint-Sauveur, près de Honfleur en Normandie.",
+            "Appartement en location saisonnière dans la résidence Les Cottages, près de Honfleur en Normandie.",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "La Rivière-Saint-Sauveur",
+            addressLocality: "Honfleur",
             addressRegion: "Normandie",
             addressCountry: "FR",
           },
@@ -53,23 +56,22 @@ export const Route = createFileRoute("/")({
 const blocs = [
   {
     titre: "Votre appartement",
-    texte: "Confort, intimité et tout ce qu'il faut pour profiter pleinement de votre séjour.",
-    photo: "sejour" as const,
+    texte: "Salon, cuisine équipée, deux chambres et un balcon plein sud à la vue dégagée.",
+    photo: "accueil-1" as const,
     to: "/appartement" as const,
     lien: "Découvrir l'appartement",
   },
   {
     titre: "La résidence",
-    texte:
-      "Un environnement agréable et reposant pour déconnecter après une journée de découverte.",
-    photo: "residence" as const,
+    texte: "Piscine, court de tennis, table de ping-pong et terrain de pétanque sur place.",
+    photo: "accueil-6" as const,
     to: "/residence" as const,
     lien: "Découvrir la résidence",
   },
   {
     titre: "La Normandie",
-    texte: "Honfleur, la côte, les villages, les marchés et les paysages normands à proximité.",
-    photo: "honfleurVieuxBassin" as const,
+    texte: "Honfleur, Étretat, Deauville, la côte et les paysages du Marais à proximité.",
+    photo: "accueil-5" as const,
     to: "/alentours" as const,
     lien: "Découvrir les alentours",
   },
@@ -83,8 +85,8 @@ const avantages = [
   },
   {
     icone: Leaf,
-    titre: "Un environnement calme",
-    texte: "Une résidence paisible et verdoyante pour se reposer après les visites.",
+    titre: "Une résidence de loisirs",
+    texte: "Piscine, tennis, ping-pong et pétanque dans un cadre calme et verdoyant.",
   },
   {
     icone: MapPin,
@@ -104,21 +106,21 @@ function Accueil() {
       {/* Hero */}
       <section className="relative flex min-h-[88svh] items-end overflow-hidden">
         <img
-          src={photos.hero.src}
-          alt={photos.hero.alt}
+          src={photos["accueil-hero-1"].src}
+          alt={photos["accueil-hero-1"].alt}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/35 to-ink/25" />
         <div className="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pb-24">
           <p className="reveal text-[0.68rem] font-semibold tracking-[0.26em] uppercase text-cream/80">
-            {"La Rivière-Saint-Sauveur · Normandie"}
+            Honfleur, Normandie
           </p>
           <h1 className="reveal title-xl mt-5 max-w-3xl text-cream">
             Une parenthèse normande aux portes de Honfleur
           </h1>
           <p className="reveal mt-5 max-w-2xl text-base leading-relaxed text-cream/85 sm:text-lg">
-            Bienvenue aux Cottages, à La Rivière-Saint-Sauveur, pour un séjour entre calme, confort
-            et découverte de la Normandie.
+            Bienvenue aux Cottages, pour un séjour entre calme, confort et découverte de la
+            Normandie.
           </p>
           <div className="reveal mt-9 flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
             <Link to="/appartement" className="btn-ghost-light w-full sm:w-auto">
@@ -126,9 +128,6 @@ function Accueil() {
             </Link>
             <AirbnbButton className="w-full sm:w-auto" />
           </div>
-          <p className="mt-8 text-[0.68rem] tracking-wide text-cream/60">
-            Photo d'exemple — les photographies du logement seront ajoutées prochainement.
-          </p>
         </div>
       </section>
 
@@ -138,13 +137,41 @@ function Accueil() {
         <p className="mt-6 font-display text-xl leading-relaxed text-foreground sm:text-2xl sm:leading-relaxed">
           À quelques minutes de Honfleur, Les Cottages offrent un cadre idéal pour découvrir la
           Normandie tout en profitant d'un environnement paisible. Que vous veniez pour un week-end
-          romantique, quelques jours en famille ou une escapade entre amis, profitez d'un
-          pied-à-terre confortable pour explorer la côte normande.
+          à deux, quelques jours en famille ou une escapade entre amis, l'appartement est un
+          pied-à-terre confortable pour explorer la côte normande. Et lorsque vous choisissez de
+          rester sur place, la résidence a de quoi occuper vos journées.
         </p>
       </section>
 
+      {/* Équipements de la résidence */}
+      <section className="border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Sur place</p>
+            <h2 className="title-lg rule-wood mt-4">Les équipements de la résidence</h2>
+            <p className="lead mt-6">
+              Piscine, tennis, ping-pong, pétanque : tout est à quelques pas de l'appartement.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {residenceEquipements.map((e) => (
+              <article key={e.id}>
+                <Photo photo={e.photo} ratio="4 / 3" className="rounded-sm shadow-soft" />
+                <h3 className="title-md mt-5 text-[1.25rem]">{e.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{e.detail}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/residence" className="btn-outline-soft">
+              Découvrir la résidence
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Trois blocs */}
-      <section className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24">
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <div className="grid gap-8 md:grid-cols-3 md:gap-6">
           {blocs.map((b) => (
             <article key={b.titre} className="group">
@@ -190,8 +217,8 @@ function Accueil() {
       {/* CTA final */}
       <section className="relative overflow-hidden">
         <img
-          src={photos.campagneNormande.src}
-          alt={photos.campagneNormande.alt}
+          src={photos["accueil-cta-1"].src}
+          alt={photos["accueil-cta-1"].alt}
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
