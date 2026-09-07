@@ -51,7 +51,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <AirbnbButton className="min-h-10 px-5 py-2 text-[0.72rem]" note={false} />
+            <AirbnbButton className="min-h-10 px-5 py-2 text-[0.72rem]" />
           </div>
 
           <button
