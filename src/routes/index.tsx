@@ -119,8 +119,8 @@ function Accueil() {
             Une parenthèse normande aux portes de Honfleur
           </h1>
           <p className="reveal mt-5 max-w-2xl text-base leading-relaxed text-cream/85 sm:text-lg">
-            Bienvenue aux Cottages, pour un séjour entre calme, confort et découverte de la
-            Normandie.
+            Bienvenue aux Cottages, à La Rivière-Saint-Sauveur, pour un séjour entre calme,
+            confort et découverte de la Normandie, aux portes de Honfleur.
           </p>
           <div className="reveal mt-9 flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
             <Link to="/appartement" className="btn-ghost-light w-full sm:w-auto">
