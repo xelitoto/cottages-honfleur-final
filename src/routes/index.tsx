@@ -4,7 +4,6 @@ import { AirbnbButton } from "@/components/AirbnbButton";
 import { Gallery } from "@/components/Gallery";
 import { Photo } from "@/components/Photo";
 import { photos, galerieAccueil } from "@/content/photos";
-import { residenceEquipements } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
