@@ -9,7 +9,7 @@ const liens = [
   { to: "/appartement", label: "L'appartement" },
   { to: "/residence", label: "La résidence" },
   { to: "/alentours", label: "Les alentours" },
-  { to: "/contact", label: "Contact" },
+  { to: "/contact", label: "Réservation" },
 ] as const;
 
 export function Header() {
@@ -51,7 +51,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <AirbnbButton className="min-h-10 px-5 py-2 text-[0.72rem]" note={false} />
+            <AirbnbButton className="min-h-10 px-5 py-2 text-[0.72rem]" />
           </div>
 
           <button
