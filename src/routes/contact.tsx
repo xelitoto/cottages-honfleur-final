@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Car, Plane } from "lucide-react";
 import { AirbnbButton } from "@/components/AirbnbButton";
 import { MapEmbed } from "@/components/MapEmbed";
-import { site } from "@/content/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -80,7 +79,7 @@ function Contact() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <div className="mb-8 max-w-2xl">
           <p className="eyebrow">Localisation</p>
-          <h2 className="title-lg rule-wood mt-3">{site.ville}, aux portes de Honfleur</h2>
+          <h2 className="title-lg rule-wood mt-3">La Rivière-Saint-Sauveur, aux portes de Honfleur</h2>
         </div>
         <MapEmbed />
       </section>
