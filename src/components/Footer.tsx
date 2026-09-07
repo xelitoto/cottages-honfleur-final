@@ -28,7 +28,7 @@ export function Footer() {
             Les alentours
           </Link>
           <Link to="/contact" className="text-muted-foreground hover:text-foreground">
-            Contact
+            Réservation
           </Link>
         </nav>
 
@@ -41,8 +41,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/70 px-5 py-6 text-center text-xs text-muted-foreground sm:px-8">
-        © {new Date().getFullYear()} {site.nomComplet}. Photographies d'exemple en attente des
-        photos définitives du logement.
+        © {new Date().getFullYear()} {site.nomComplet}.
       </div>
     </footer>
   );

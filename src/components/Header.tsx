@@ -9,7 +9,7 @@ const liens = [
   { to: "/appartement", label: "L'appartement" },
   { to: "/residence", label: "La résidence" },
   { to: "/alentours", label: "Les alentours" },
-  { to: "/contact", label: "Contact" },
+  { to: "/contact", label: "Réservation" },
 ] as const;
 
 export function Header() {
