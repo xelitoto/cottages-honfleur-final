@@ -81,22 +81,22 @@ const avantages = [
   {
     icone: Anchor,
     titre: "Aux portes de Honfleur",
-    texte: "Le Vieux Bassin, les ruelles et l'ambiance maritime à quelques minutes.",
+    texte: "Profitez du charme de Honfleur tout en séjournant dans un environnement calme.",
   },
   {
     icone: Leaf,
-    titre: "Une résidence de loisirs",
-    texte: "Piscine, tennis, ping-pong et pétanque dans un cadre calme et verdoyant.",
+    titre: "Un appartement confortable",
+    texte: "Deux chambres et des équipements pensés pour un séjour agréable, en couple, en famille ou entre amis.",
   },
   {
     icone: MapPin,
     titre: "Idéal pour découvrir la Normandie",
-    texte: "La côte, Deauville, Trouville, Étretat et la campagne normande à portée de route.",
+    texte: "Un point de départ privilégié pour explorer Honfleur, Étretat, Deauville, Trouville et les paysages normands.",
   },
   {
     icone: KeyRound,
-    titre: "Réservation simple via Airbnb",
-    texte: "Disponibilités, échanges et paiement sécurisés directement sur la plateforme.",
+    titre: "Un séjour en toute sérénité",
+    texte: "Balcon exposé plein sud, vue dégagée et deux places de parking pour profiter pleinement de votre escapade.",
   },
 ];
 
@@ -141,33 +141,6 @@ function Accueil() {
           pied-à-terre confortable pour explorer la côte normande. Et lorsque vous choisissez de
           rester sur place, la résidence a de quoi occuper vos journées.
         </p>
-      </section>
-
-      {/* Équipements de la résidence */}
-      <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Sur place</p>
-            <h2 className="title-lg rule-wood mt-4">Les équipements de la résidence</h2>
-            <p className="lead mt-6">
-              Piscine, tennis, ping-pong, pétanque : tout est à quelques pas de l'appartement.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {residenceEquipements.map((e) => (
-              <article key={e.id}>
-                <Photo photo={e.photo} ratio="4 / 3" className="rounded-sm shadow-soft" />
-                <h3 className="title-md mt-5 text-[1.25rem]">{e.label}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{e.detail}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Link to="/residence" className="btn-outline-soft">
-              Découvrir la résidence
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* Trois blocs */}
