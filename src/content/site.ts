@@ -63,7 +63,7 @@ export const pieces = [
       { label: "Pour les enfants", valeur: "Chaise bébé" },
       { label: "Assises", valeur: "Canapé" },
       { label: "Multimédia", valeur: "Télévision" },
-      { label: "Confort d'été", valeur: "Ventilateur" },
+      { label: "Confort d'été", valeur: "Ventilateur de plafond" },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const pieces = [
     details: [
       { label: "Couchage", valeur: "1 lit double" },
       { label: "Literie", valeur: "Literie neuve" },
-      { label: "Linge", valeur: "Linge de lit et serviettes fournis" },
+      { label: "Linge", valeur: "Linge de lit fourni" },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const pieces = [
     details: [
       { label: "Couchage", valeur: "2 lits simples" },
       { label: "Literie", valeur: "Literie neuve" },
-      { label: "Linge", valeur: "Linge de lit et serviettes fournis" },
+      { label: "Linge", valeur: "Linge de lit fourni" },
     ],
   },
   {
