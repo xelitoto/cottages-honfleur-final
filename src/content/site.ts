@@ -139,6 +139,7 @@ export const equipementsSupplementaires = [
   { label: "Boules de pétanque" },
   { label: "Télévision" },
   { label: "Chauffage électrique" },
+  { label: "Nombreux rangements — grands placards intégrés dans le salon et les deux chambres" },
   { label: "2 places de parking" },
   { label: "Lit parapluie" },
   { label: "Chaise bébé" },
