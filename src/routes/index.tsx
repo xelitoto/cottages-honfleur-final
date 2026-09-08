@@ -119,14 +119,10 @@ function Accueil() {
           </h1>
           <p className="reveal mt-5 max-w-2xl text-base leading-relaxed text-cream/85 sm:text-lg">
             Bienvenue aux Cottages, à La Rivière-Saint-Sauveur, pour un séjour entre calme,
-            confort et découverte de la Normandie, aux portes de Honfleur.
+            confort et découverte de la Normandie, aux portes de Honfleur. Profitez d'un cadre
+            paisible pour découvrir Honfleur, la côte normande et les paysages de la région, tout
+            en profitant sur place d'une résidence pensée pour les vacances.
           </p>
-          <div className="reveal mt-9 flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
-            <Link to="/appartement" className="btn-ghost-light w-full sm:w-auto">
-              Découvrir l'appartement
-            </Link>
-            <AirbnbButton className="w-full sm:w-auto" />
-          </div>
         </div>
       </section>
 
@@ -200,9 +196,6 @@ function Accueil() {
           <p className="mt-4 text-cream/85">Découvrez l'appartement et préparez votre séjour.</p>
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <AirbnbButton className="w-full sm:w-auto" />
-            <Link to="/appartement" className="btn-ghost-light w-full sm:w-auto">
-              Voir l'appartement
-            </Link>
           </div>
         </div>
       </section>

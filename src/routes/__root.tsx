@@ -13,7 +13,6 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MobileBookingBar } from "@/components/MobileBookingBar";
 
 function NotFoundComponent() {
   return (
@@ -133,12 +132,11 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="flex-1 pb-24 lg:pb-0">
+        <main className="flex-1">
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
         </main>
         <Footer />
-        <MobileBookingBar />
       </div>
     </QueryClientProvider>
   );
