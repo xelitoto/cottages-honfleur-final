@@ -110,7 +110,7 @@ function Accueil() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/35 to-ink/25" />
-        <div className="relative mx-auto mt-[32svh] w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pb-24">
+        <div className="relative mx-auto mt-[15svh] w-full max-w-6xl px-5 pt-24 pb-16 sm:px-8 sm:pb-24">
           <p className="reveal text-[0.68rem] font-semibold tracking-[0.26em] uppercase text-cream/80">
             Honfleur, Normandie
           </p>
