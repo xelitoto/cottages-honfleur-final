@@ -103,14 +103,14 @@ function Accueil() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[88svh] items-end overflow-hidden">
+      <section className="relative flex min-h-[88svh] items-start overflow-hidden">
         <img
           src={photos["accueil-hero-1"].src}
           alt={photos["accueil-hero-1"].alt}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/35 to-ink/25" />
-        <div className="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pb-24">
+        <div className="relative mx-auto mt-[38svh] w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pb-24">
           <p className="reveal text-[0.68rem] font-semibold tracking-[0.26em] uppercase text-cream/80">
             Honfleur, Normandie
           </p>
@@ -118,10 +118,8 @@ function Accueil() {
             Une parenthèse normande aux portes de Honfleur
           </h1>
           <p className="reveal mt-5 max-w-2xl text-base leading-relaxed text-cream/85 sm:text-lg">
-            Bienvenue aux Cottages, à La Rivière-Saint-Sauveur, pour un séjour entre calme,
-            confort et découverte de la Normandie, aux portes de Honfleur. Profitez d'un cadre
-            paisible pour découvrir Honfleur, la côte normande et les paysages de la région, tout
-            en profitant sur place d'une résidence pensée pour les vacances.
+            Aux portes de Honfleur, Les Cottages offrent un cadre paisible pour profiter de la côte
+            normande, entre découvertes, moments de détente et escapades en famille ou entre amis.
           </p>
         </div>
       </section>
@@ -130,11 +128,8 @@ function Accueil() {
       <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:px-8 sm:py-24">
         <p className="eyebrow">Bienvenue</p>
         <p className="mt-6 font-display text-xl leading-relaxed text-foreground sm:text-2xl sm:leading-relaxed">
-          À quelques minutes de Honfleur, Les Cottages offrent un cadre idéal pour découvrir la
-          Normandie tout en profitant d'un environnement paisible. Que vous veniez pour un week-end
-          à deux, quelques jours en famille ou une escapade entre amis, l'appartement est un
-          pied-à-terre confortable pour explorer la côte normande. Et lorsque vous choisissez de
-          rester sur place, la résidence a de quoi occuper vos journées.
+          Un appartement confortable, une résidence avec ses équipements de loisirs et Honfleur à
+          quelques minutes : tout est réuni pour profiter pleinement de votre séjour en Normandie.
         </p>
       </section>
 
