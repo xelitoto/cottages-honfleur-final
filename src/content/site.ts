@@ -61,7 +61,7 @@ export const pieces = [
       { label: "Surface", valeur: "20 m²" },
       { label: "Coin repas", valeur: "Table et chaises" },
       { label: "Pour les enfants", valeur: "Chaise bébé" },
-      { label: "Assises", valeur: "Canapé" },
+      { label: "Assises", valeur: "Canapé et deux fauteuils en osier" },
       { label: "Multimédia", valeur: "Télévision" },
       { label: "Confort d'été", valeur: "Ventilateur de plafond" },
     ],
