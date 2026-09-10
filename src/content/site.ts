@@ -78,7 +78,7 @@ export const pieces = [
       { label: "Froid", valeur: "Grand réfrigérateur avec congélateur" },
       { label: "Linge", valeur: "Lave-linge et sèche-linge" },
       { label: "Vaisselle", valeur: "Lave-vaisselle" },
-      { label: "Équipement", valeur: "Vaisselle complète et ustensiles de cuisine" },
+      { label: "Équipement", valeur: "Vaisselle et ustensiles" },
       { label: "Café", valeur: "Machine Nespresso et cafetière" },
     ],
   },
@@ -86,7 +86,7 @@ export const pieces = [
     id: "chambre-double",
     titre: "La chambre avec lit double",
     intro:
-      "Une chambre calme avec un lit double et une literie neuve. Le linge de lit et les serviettes sont fournis.",
+      "Une chambre calme avec un lit double et une literie neuve.",
     photos: ["appartement-chambre-double-1", "appartement-chambre-double-2"] as const,
     details: [
       { label: "Couchage", valeur: "1 lit double" },
@@ -110,7 +110,7 @@ export const pieces = [
     id: "salle-de-bain",
     titre: "La salle de bain",
     intro:
-      "Une salle de bain avec baignoire et douche, et des WC séparés pour plus de confort à plusieurs.",
+      "Une salle de bain avec baignoire et des WC séparés pour plus de confort à plusieurs.",
     photos: ["appartement-salle-de-bain-1"] as const,
     details: [
       { label: "Bain et douche", valeur: "Baignoire avec douche" },
