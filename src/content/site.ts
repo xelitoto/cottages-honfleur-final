@@ -86,7 +86,7 @@ export const pieces = [
     id: "chambre-double",
     titre: "La chambre avec lit double",
     intro:
-      "Une chambre calme avec un lit double et une literie neuve.",
+      "Une chambre calme et agréable, idéale pour se reposer après une journée de découverte de la Normandie.",
     photos: ["appartement-chambre-double-1", "appartement-chambre-double-2"] as const,
     details: [
       { label: "Couchage", valeur: "1 lit double" },
