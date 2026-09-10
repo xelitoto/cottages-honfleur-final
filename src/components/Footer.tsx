@@ -24,7 +24,7 @@ export function Footer() {
           <Link to="/residence" className="text-muted-foreground hover:text-foreground">
             La résidence
           </Link>
-          <Link to="/alentours" className="text-muted-foreground hover:text-foreground">
+          <Link to="/alentours" className="whitespace-nowrap text-muted-foreground hover:text-foreground">
             Les alentours
           </Link>
           <Link to="/contact" className="text-muted-foreground hover:text-foreground">
