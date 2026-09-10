@@ -43,7 +43,7 @@ export function Header() {
                 activeOptions={{ exact: l.to === "/" }}
                 activeProps={{ className: "text-foreground" }}
                 inactiveProps={{ className: "text-muted-foreground" }}
-                className="text-[0.8rem] font-medium tracking-[0.1em] uppercase transition-colors hover:text-foreground"
+                className="whitespace-nowrap text-[0.8rem] font-medium tracking-[0.1em] uppercase transition-colors hover:text-foreground"
               >
                 {l.label}
               </Link>
@@ -77,7 +77,7 @@ export function Header() {
                 activeOptions={{ exact: l.to === "/" }}
                 activeProps={{ className: "text-foreground" }}
                 inactiveProps={{ className: "text-muted-foreground" }}
-                className="border-b border-border/60 py-4 font-display text-2xl last:border-0"
+                className="whitespace-nowrap border-b border-border/60 py-4 font-display text-2xl last:border-0"
               >
                 {l.label}
               </Link>

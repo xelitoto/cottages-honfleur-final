@@ -31,7 +31,7 @@ function Alentours() {
   return (
     <>
       <header className="mx-auto max-w-4xl px-5 pt-16 pb-10 text-center sm:px-8 sm:pt-24 sm:pb-14">
-        <p className="eyebrow">Les alentours</p>
+        <p className="eyebrow whitespace-nowrap">Les alentours</p>
         <h1 className="title-xl mt-5">Découvrez la Normandie</h1>
         <p className="lead mx-auto mt-6 max-w-2xl">
           Depuis l'appartement, Honfleur est à quelques minutes et toute la côte normande s'ouvre à
