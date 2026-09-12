@@ -157,6 +157,7 @@ function Accueil() {
           titre="Un aperçu de votre séjour"
           intro="Quelques images pour vous donner le ton : l'esprit du logement, la résidence et la Normandie alentour."
           items={galerieAccueil}
+           accueil
         />
       </div>
 
