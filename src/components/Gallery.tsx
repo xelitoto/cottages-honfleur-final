@@ -25,13 +25,16 @@ export function Gallery({ titre, intro, items, accueil }: Props) {
   )}
 >
   {items.map((key, i) => (
-    <Photo
-      key={key + i}
-      photo={key}
-      ratio={accueil ? "4 / 3" : i % 5 === 0 ? "4 / 5" : "4 / 3"}
-      imgClassName={accueil ? "object-contain" : undefined}
-      className="rounded-sm shadow-soft"
-    />
+  <Photo
+  key={key + i}
+  photo={key}
+  ratio={accueil ? "4 / 3" : i % 5 === 0 ? "4 / 5" : "4 / 3"}
+  imgClassName={accueil ? "object-contain" : undefined}
+  className={cn(
+    "rounded-sm shadow-soft",
+    accueil && "bg-transparent"
+    )}
+  />
   ))}
 </div>
     </section>
