@@ -112,6 +112,10 @@ export const photos = {
     src: accueilHero1,
     alt: "Salon lumineux de l'appartement des Cottages près de Honfleur",
   },
+
+  "accueil-appartement-1": { src: accueilApartement1, alt: "Séjour chaleureux de l'appartement" },
+  "accueil-residence-1": { src: accueilResidence1, alt: "Piscine de la résidence" },
+  "accueil-alentours-1": { src: accueilAlentours1, alt: "Honfleur" },
   "accueil-1": { src: accueil1, alt: "Séjour chaleureux de l'appartement" },
   "accueil-2": { src: accueil2, alt: "Cuisine équipée de l'appartement" },
   "accueil-3": { src: accueil3, alt: "Chambre avec literie neuve" },
