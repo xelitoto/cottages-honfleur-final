@@ -1,5 +1,6 @@
 import { type PhotoKey } from "@/content/photos";
 import { Photo } from "./Photo";
+import { cn } from "@/lib/utils";
 
 type Props = {
   titre?: string;
@@ -8,7 +9,7 @@ type Props = {
   accueil?: boolean;
 };
 
-export function Gallery({ titre, intro, items }: Props) {
+export function Gallery({ titre, intro, items, accueil }: Props) {
   return (
     <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       {titre ? (
