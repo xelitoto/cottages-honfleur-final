@@ -53,6 +53,9 @@
  */
 
 import accueilHero1 from "@/assets/photos/accueil-hero-1.jpg";
+import accueilAppartement1 from "@/assets/photos/accueil-appartement-1.jpg";
+import accueilResidence1 from "@/assets/photos/accueil-residence-1.jpg";
+import accueilAlentours1 from "@/assets/photos/accueil-alentours-1.jpg";
 import accueil1 from "@/assets/photos/accueil-1.jpg";
 import accueil2 from "@/assets/photos/accueil-2.jpg";
 import accueil3 from "@/assets/photos/accueil-3.jpg";
