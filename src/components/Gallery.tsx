@@ -1,6 +1,5 @@
 import { type PhotoKey } from "@/content/photos";
 import { Photo } from "./Photo";
-import { cn } from "@/lib/utils";
 
 type Props = {
   titre?: string;
