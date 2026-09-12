@@ -5,6 +5,7 @@ type Props = {
   titre?: string;
   intro?: string;
   items: PhotoKey[];
+  accueil?: boolean;
 };
 
 export function Gallery({ titre, intro, items }: Props) {
@@ -16,16 +17,22 @@ export function Gallery({ titre, intro, items }: Props) {
           {intro ? <p className="lead mt-4">{intro}</p> : null}
         </div>
       ) : null}
-      <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-        {items.map((key, i) => (
-          <Photo
-            key={key + i}
-            photo={key}
-            ratio={i % 5 === 0 ? "4 / 5" : "4 / 3"}
-            className="rounded-sm shadow-soft"
-          />
-        ))}
-      </div>
+      <div
+  className={cn(
+    "grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3",
+    accueil && "mx-auto max-w-5xl"
+  )}
+>
+  {items.map((key, i) => (
+    <Photo
+      key={key + i}
+      photo={key}
+      ratio={accueil ? "4 / 3" : i % 5 === 0 ? "4 / 5" : "4 / 3"}
+      imgClassName={accueil ? "object-contain" : undefined}
+      className="rounded-sm shadow-soft"
+    />
+  ))}
+</div>
     </section>
   );
 }
