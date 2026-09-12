@@ -118,7 +118,7 @@ function Accueil() {
             Une parenthèse normande aux portes de Honfleur
           </h1>
           <p className="reveal mt-5 max-w-2xl text-base leading-relaxed text-cream/85 sm:text-lg">
-            Aux portes de Honfleur, Les Cottages offrent un cadre paisible pour profiter de la côte
+            A la Rivière-Saint-Sauveur, Les Cottages offrent un cadre paisible pour profiter de la côte
             normande, entre découvertes, moments de détente et escapades en famille ou entre amis.
           </p>
         </div>
