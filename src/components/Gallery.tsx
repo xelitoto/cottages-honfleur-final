@@ -32,7 +32,7 @@ export function Gallery({ titre, intro, items, accueil }: Props) {
   imgClassName={accueil ? "object-contain" : undefined}
   className={cn(
     "rounded-sm shadow-soft",
-    accueil && "bg-transparent"
+    accueil && "bg-transparent max-w-[80%] justify-self-center self-center"
     )}
   />
   ))}
