@@ -40,15 +40,6 @@ function Appartement() {
         </p>
       </header>
 
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <Photo
-          photo="appartement-salon-1"
-          ratio="16 / 9"
-          className="rounded-sm shadow-soft"
-          priority
-        />
-      </div>
-
       {/* Pièces */}
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {pieces.map((piece, i) => (
