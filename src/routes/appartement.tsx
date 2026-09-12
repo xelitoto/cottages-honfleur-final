@@ -54,7 +54,6 @@ function Appartement() {
                 className={`rounded-sm shadow-soft ${i % 2 === 1 ? "lg:order-2" : ""}`}
               />
               <div>
-                <p className="eyebrow">{`0${i + 1}`}</p>
                 <h2 className="title-lg rule-wood mt-3">{piece.titre}</h2>
                 <p className="lead mt-6">{piece.intro}</p>
                 <dl className="mt-8 divide-y divide-border border-t border-border">
