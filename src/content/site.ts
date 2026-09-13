@@ -156,13 +156,6 @@ export const destinations = [
       "Le Vieux Bassin, ses maisons hautes et colorées, les ruelles pavées, les galeries d'artistes et les terrasses au bord de l'eau, à quelques minutes seulement.",
   },
   {
-    id: "plage-du-butin",
-    nom: "Plage du Butin",
-    photo: "alentours-plage-butin-1" as const,
-    description:
-      "La plage de Honfleur, au pied des collines : idéale pour une promenade au bord de l'eau et pour regarder passer les bateaux.",
-  },
-  {
     id: "etretat",
     nom: "Étretat",
     photo: "alentours-etretat-1" as const,
@@ -238,13 +231,6 @@ export const destinations = [
     photo: "alentours-route-chaumieres-1" as const,
     description:
       "Un itinéraire de campagne entre chaumières à colombages, vergers et petits villages typiques du Pays d'Auge et du Marais.",
-  },
-  {
-    id: "pont-de-normandie",
-    nom: "Pont de Normandie",
-    photo: "alentours-pont-normandie-1" as const,
-    description:
-      "L'immense pont à haubans qui enjambe l'estuaire de la Seine, spectaculaire à traverser comme à observer depuis les berges.",
   },
 ];
 
