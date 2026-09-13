@@ -98,6 +98,12 @@ import alentoursPlageButin1 from "@/assets/photos/alentours-plage-butin-1.jpg";
 import alentoursMontJoli1 from "@/assets/photos/alentours-mont-joli-1.jpg";
 import alentoursRouteChaumieres1 from "@/assets/photos/alentours-route-chaumieres-1.jpg";
 import alentoursMaraisVernier1 from "@/assets/photos/alentours-marais-vernier-1.jpg";
+import alentoursPontAudemer1 from "@/assets/photos/alentours-pont-audemer-1.jpg";
+import alentoursFecamp1 from "@/assets/photos/alentours-fecamp-1.jpg";
+import alentoursCabourg1 from "@/assets/photos/alentours-cabourg-1.jpg";
+import alentoursHoulgate1 from "@/assets/photos/alentours-houlgate-1.jpg";
+import alentoursOuistreham1 from "@/assets/photos/alentours-ouistreham-1.jpg";
+import alentoursPlagesDebarquement1 from "@/assets/photos/alentours-plages-debarquement-1.jpg";
 
 export type Photo = {
   /** Fichier image importé depuis src/assets/photos/ */
@@ -190,6 +196,30 @@ export const photos = {
   "alentours-marais-vernier-1": {
     src: alentoursMaraisVernier1,
     alt: "Paysage de prairies et zones humides du Marais-Vernier",
+  },
+  "alentours-pont-audemer-1": {
+  src: alentoursPontAudemer1,
+  alt: "Pont-Audemer",
+  },
+  "alentours-fecamp-1": {
+    src: alentoursFecamp1,
+    alt: "Fécamp",
+  },
+  "alentours-cabourg-1": {
+    src: alentoursCabourg1,
+    alt: "Cabourg",
+  },
+  "alentours-houlgate-1": {
+    src: alentoursHoulgate1,
+    alt: "Houlgate",
+  },
+  "alentours-ouistreham-1": {
+    src: alentoursOuistreham1,
+    alt: "Ouistreham",
+  },
+  "alentours-plages-debarquement-1": {
+    src: alentoursPlagesDebarquement1,
+    alt: "Les plages du Débarquement",
   },
 } satisfies Record<string, Photo>;
 
