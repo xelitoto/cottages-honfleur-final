@@ -156,6 +156,13 @@ export const destinations = [
       "Le Vieux Bassin, ses maisons hautes et colorées, les ruelles pavées, les galeries d'artistes et les terrasses au bord de l'eau, à quelques minutes seulement.",
   },
   {
+    id: "plage-du-butin",
+    nom: "Plage du Butin",
+    photo: "alentours-plage-butin-1" as const,
+    description:
+      "La plage de Honfleur, au pied des collines : idéale pour une promenade au bord de l'eau et pour regarder passer les bateaux.",
+  },
+  {
     id: "etretat",
     nom: "Étretat",
     photo: "alentours-etretat-1" as const,
@@ -176,19 +183,47 @@ export const destinations = [
     description:
       "Plus familiale et animée que sa voisine : un port de pêche, un marché aux poissons et une longue plage de sable.",
   },
-  {
-    id: "pont-de-normandie",
-    nom: "Pont de Normandie",
-    photo: "alentours-pont-normandie-1" as const,
+{
+    id: "pont-audemer",
+    nom: "Pont-Audemer",
+    photo: "alentours-pont-audemer-1" as const,
     description:
-      "L'immense pont à haubans qui enjambe l'estuaire de la Seine, spectaculaire à traverser comme à observer depuis les berges.",
+      "Une charmante cité au bord de la Risle, surnommée la « Venise normande ». Ses canaux, ses petites rues et ses maisons à colombages invitent à une agréable promenade.",
   },
   {
-    id: "plage-du-butin",
-    nom: "Plage du Butin",
-    photo: "alentours-plage-butin-1" as const,
+    id: "fecamp",
+    nom: "Fécamp",
+    photo: "alentours-fecamp-1" as const,
     description:
-      "La plage de Honfleur, au pied des collines : idéale pour une promenade au bord de l'eau et pour regarder passer les bateaux.",
+      "Entre mer et falaises, Fécamp séduit par son port, son front de mer et son riche patrimoine. Une belle escapade pour découvrir la côte normande et ses paysages.",
+  },
+  {
+    id: "cabourg",
+    nom: "Cabourg",
+    photo: "alentours-cabourg-1" as const,
+    description:
+      "Station balnéaire élégante au charme intemporel, Cabourg offre une longue promenade en bord de mer, de belles villas et une atmosphère paisible.",
+  },
+  {
+    id: "houlgate",
+    nom: "Houlgate",
+    photo: "alentours-houlgate-1" as const,
+    description:
+      "Avec ses villas Belle Époque, sa grande plage et les falaises des Vaches Noires à proximité, Houlgate est une station balnéaire pleine de charme.",
+  },
+  {
+    id: "ouistreham",
+    nom: "Ouistreham",
+    photo: "alentours-ouistreham-1" as const,
+    description:
+      "Au bord de la Manche, Ouistreham offre une grande plage de sable, un port animé et de belles balades en bord de mer.",
+  },
+  {
+    id: "plages-debarquement",
+    nom: "Les plages du Débarquement",
+    photo: "alentours-plages-debarquement-1" as const,
+    description:
+      "Un lieu chargé d’histoire où se mêlent mémoire et paysages exceptionnels. D’Omaha Beach aux autres plages du Débarquement, une découverte historique unique.",
   },
   {
     id: "mont-joli",
@@ -205,11 +240,11 @@ export const destinations = [
       "Un itinéraire de campagne entre chaumières à colombages, vergers et petits villages typiques du Pays d'Auge et du Marais.",
   },
   {
-    id: "marais-vernier",
-    nom: "Marais-Vernier",
-    photo: "alentours-marais-vernier-1" as const,
+    id: "pont-de-normandie",
+    nom: "Pont de Normandie",
+    photo: "alentours-pont-normandie-1" as const,
     description:
-      "Un vaste espace naturel de prairies humides et d'étangs, parcouru de sentiers, où l'on observe chevaux, vaches rustiques et oiseaux.",
+      "L'immense pont à haubans qui enjambe l'estuaire de la Seine, spectaculaire à traverser comme à observer depuis les berges.",
   },
 ];
 
