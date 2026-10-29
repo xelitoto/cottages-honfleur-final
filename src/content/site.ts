@@ -115,6 +115,7 @@ export const pieces = [
     details: [
       { label: "Bain et douche", valeur: "Baignoire avec douche" },
       { label: "WC", valeur: "WC séparés" },
+      { label: "Séche cheveux", valeur: "Séche cheveux" },
       { label: "Linge", valeur: "Serviettes fournies" },
     ],
   },
