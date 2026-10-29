@@ -136,9 +136,9 @@ export const pieces = [
 /** ÉQUIPEMENTS SUPPLÉMENTAIRES DE L'APPARTEMENT */
 export const equipementsSupplementaires = [
   { label: "Wi-Fi" },
+  { label: "Télévision avec BOX" },
   { label: "Raquettes de tennis et de ping-pong" },
   { label: "Boules de pétanque" },
-  { label: "Télévision avec BOX" },
   { label: "Chauffage électrique" },
   { label: "Nombreux rangements — grands placards intégrés dans le salon et les deux chambres" },
   { label: "2 places de parking" },
